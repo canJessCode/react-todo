@@ -6,8 +6,9 @@ import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
 // import dayjs from "dayjs";
-// import timezone from "dayjs/plugin/timezone";
-// import utc from "dayjs/plugin/utc";
+
+// const c = dayjs();
+// console.log(c.format());
 
 function App() {
   const [inputText, setInputText] = useState("");

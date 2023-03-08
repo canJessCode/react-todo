@@ -276,3 +276,19 @@ span:nth-child(10) {
   animation-delay: 2.75s;
   animation-duration: 2.25s;
 }
+
+.timezone {
+  display: inline-block;
+  font-weight: bold;
+  /* align-items: center; */
+  font-size: 10px;
+  width: 200px;
+  height: 30px;
+  margin-left: 5px;
+  overflow-wrap: break-word;
+  background-color: transparent;
+}
+
+.fas fa-globe {
+  color: green;
+}

@@ -1,4 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+const date = new Date();
+const dateAsString = date.toString();
+// const timezone = dateAsString.match(/\(([^\)]+)\)$/)[1];
+// console.log("timezone", timezone);
+// console.log(date.toLocaleTimeString(), timezone);
 
 const Todo = ({ text, todos, setTodos, todo }) => {
   const deleteHandler = () => {
@@ -21,17 +27,24 @@ const Todo = ({ text, todos, setTodos, todo }) => {
   };
 
   return (
-    <div className="todo">
-      <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-        {text}
-      </li>
-      <button className="complete-btn" onClick={completeHandler}>
-        <i className="fas fa-check"></i>
-      </button>
-      <button className="trash-btn" onClick={deleteHandler}>
-        <i className="fas fa-trash"></i>
-      </button>
-    </div>
+    <Fragment>
+      <div className="todo">
+        <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+          {text}
+        </li>
+        <button className="complete-btn" onClick={completeHandler}>
+          <i className="fas fa-check"></i>
+        </button>
+        <button className="trash-btn" onClick={deleteHandler}>
+          <i className="fas fa-trash"></i>
+        </button>
+        <div className="timezone">
+          <i className="fas fa-globe"></i>
+          &nbsp; &nbsp;
+          {dateAsString}
+        </div>
+      </div>
+    </Fragment>
   );
 };
 
